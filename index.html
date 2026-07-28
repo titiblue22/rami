@@ -265,6 +265,12 @@
   }
   .score-input-row:last-of-type{ border-bottom:none; }
   .score-input-row label{ flex:1; font-size:16px; }
+  .score-input-row.excluded label{ color:var(--gray); }
+  .score-input-row input[type="checkbox"]{
+    width:20px;
+    height:20px;
+    accent-color:var(--blue);
+  }
   .stepper{
     display:flex;
     align-items:center;
@@ -281,6 +287,7 @@
     font-weight:600;
     line-height:1;
   }
+  .stepper.disabled{ opacity:0.35; pointer-events:none; }
   .stepper button:active{ background:var(--separator); }
   .stepper input{
     width:60px;
@@ -415,7 +422,7 @@
         <div class="row" data-edit-round="${i}">
           <div class="round-header"><span>Manche ${i+1}</span><span>${r.dealerName ? '🃏 ' + r.dealerName : ''}</span></div>
           <div class="round-scores">
-            ${players.map(p => `<span>${p.name}: <b>${r.scores[p.id] ?? 0}</b></span>`).join('')}
+            ${players.map(p => `<span>${p.name}: <b>${(p.id in r.scores) ? r.scores[p.id] : '—'}</b></span>`).join('')}
           </div>
         </div>
       `).join('');
@@ -461,16 +468,20 @@
     const existing = index !== null ? rounds[index] : null;
     roundNumberLabel.textContent = (index !== null ? index + 1 : rounds.length + 1);
     document.getElementById('deleteRoundBtn').style.display = index !== null ? 'block' : 'none';
-    scoreInputs.innerHTML = players.map(p => `
-      <div class="score-input-row">
+    scoreInputs.innerHTML = players.map(p => {
+      const included = existing ? (p.id in existing.scores) : true;
+      return `
+      <div class="score-input-row ${included ? '' : 'excluded'}">
+        <input type="checkbox" data-participant="${p.id}" ${included ? 'checked' : ''}>
         <label>${p.name}</label>
-        <div class="stepper">
+        <div class="stepper ${included ? '' : 'disabled'}" data-stepper="${p.id}">
           <button type="button" data-step="-1" data-target="${p.id}">−</button>
           <input type="number" inputmode="numeric" data-score="${p.id}" value="${existing ? (existing.scores[p.id] ?? 0) : 0}">
           <button type="button" data-step="1" data-target="${p.id}">+</button>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
     overlay.classList.add('show');
   }
 
@@ -495,6 +506,15 @@
     input.value = (parseInt(input.value) || 0) + step;
   });
 
+  scoreInputs.addEventListener('change', (e) => {
+    const check = e.target.closest('[data-participant]');
+    if(!check) return;
+    const row = check.closest('.score-input-row');
+    const stepper = row.querySelector('.stepper');
+    row.classList.toggle('excluded', !check.checked);
+    stepper.classList.toggle('disabled', !check.checked);
+  });
+
   document.getElementById('cancelRoundBtn').addEventListener('click', () => {
     editingIndex = null;
     overlay.classList.remove('show');
@@ -502,8 +522,11 @@
 
   document.getElementById('validateRoundBtn').addEventListener('click', () => {
     const scores = {};
-    scoreInputs.querySelectorAll('[data-score]').forEach(input => {
-      scores[parseInt(input.dataset.score)] = parseInt(input.value) || 0;
+    scoreInputs.querySelectorAll('[data-participant]').forEach(check => {
+      if(!check.checked) return;
+      const id = parseInt(check.dataset.participant);
+      const input = scoreInputs.querySelector(`input[data-score="${id}"]`);
+      scores[id] = parseInt(input.value) || 0;
     });
     if(editingIndex !== null){
       rounds[editingIndex].scores = scores;
