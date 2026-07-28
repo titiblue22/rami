@@ -2,569 +2,568 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rami</title>
-<link rel="apple-touch-icon" href="data:image/png;base64,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">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Rami">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23ffffff'/%3E%3Cg transform='translate(50 52) rotate(-12)'%3E%3Crect x='-28' y='-38' width='40' height='56' rx='6' fill='%23fff' stroke='%23222' stroke-width='3'/%3E%3Ctext x='-20' y='-18' font-family='Georgia' font-size='16' fill='%23c0392b'%3EA%3C/text%3E%3Ctext x='-22' y='6' font-family='Georgia' font-size='18' fill='%23c0392b'%3E♦%3C/text%3E%3C/g%3E%3Cg transform='translate(56 48) rotate(10)'%3E%3Crect x='-20' y='-38' width='40' height='56' rx='6' fill='%23fff' stroke='%23222' stroke-width='3'/%3E%3Ctext x='-12' y='-18' font-family='Georgia' font-size='16' fill='%23111'%3EK%3C/text%3E%3Ctext x='-14' y='6' font-family='Georgia' font-size='18' fill='%23111'%3E♠%3C/text%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23ffffff'/%3E%3Cg transform='translate(50 52) rotate(-12)'%3E%3Crect x='-28' y='-38' width='40' height='56' rx='6' fill='%23fff' stroke='%23222' stroke-width='3'/%3E%3Ctext x='-20' y='-18' font-family='Georgia' font-size='16' fill='%23c0392b'%3EA%3C/text%3E%3Ctext x='-22' y='6' font-family='Georgia' font-size='18' fill='%23c0392b'%3E♦%3C/text%3E%3C/g%3E%3Cg transform='translate(56 48) rotate(10)'%3E%3Crect x='-20' y='-38' width='40' height='56' rx='6' fill='%23fff' stroke='%23222' stroke-width='3'/%3E%3Ctext x='-12' y='-18' font-family='Georgia' font-size='16' fill='%23111'%3EK%3C/text%3E%3Ctext x='-14' y='6' font-family='Georgia' font-size='18' fill='%23111'%3E♠%3C/text%3E%3C/g%3E%3C/svg%3E">
 <style>
-  :root{
-    --bg:#F2F2F7;
-    --card:#FFFFFF;
-    --blue:#007AFF;
-    --red:#FF3B30;
-    --green:#34C759;
-    --gray:#8E8E93;
-    --gray-light:#C7C7CC;
-    --separator:#E5E5EA;
-    --text:#1C1C1E;
-  }
-  body.dark{
-    --bg:#0B0B0F;
-    --card:#1C1C1E;
-    --blue:#D4AF37;
-    --red:#FF453A;
-    --green:#30D158;
-    --gray:#8E8E93;
-    --gray-light:#3A3A3C;
-    --separator:#2C2C2E;
-    --text:#F2F2F7;
-  }
-  body.dark .navbar{
-    background:rgba(11,11,15,0.85);
-  }
-  body.dark .tabbar{
-    background:rgba(28,28,30,0.9);
-  }
-  body.dark .dealer-btn{
-    color:#D4AF37;
-  }
-  body.dark .btn{
-    color:#0B0B0F;
-  }
-  body.dark .btn.secondary{
-    color:#D4AF37;
-  }
-  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
-  html,body{height:100%;}
-  body{
-    margin:0;
-    background:var(--bg);
-    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-    color:var(--text);
-    overscroll-behavior:none;
-  }
-  .navbar{
-    position:sticky; top:0; z-index:10;
-    background:rgba(242,242,247,0.85);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    padding:calc(env(safe-area-inset-top) + 14px) 16px 10px;
-    text-align:center;
-    border-bottom:0.5px solid var(--separator);
-    transition:background 0.2s;
-  }
-  .navbar h1{
-    margin:0;
-    font-size:17px;
-    font-weight:600;
-  }
-  .navbar .sub{
-    font-size:13px;
-    color:var(--gray);
-    margin-top:2px;
-  }
-  .container{
-    max-width:520px;
-    margin:0 auto;
-    padding:16px 16px 120px;
-  }
-  .section-title{
-    font-size:13px;
-    text-transform:uppercase;
-    color:var(--gray);
-    margin:20px 6px 8px;
-    letter-spacing:0.03em;
-  }
-  .card{
-    background:var(--card);
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 1px 2px rgba(0,0,0,0.04);
-  }
-  .row{
-    display:flex;
-    align-items:center;
-    padding:12px 14px;
-    border-bottom:0.5px solid var(--separator);
-    gap:10px;
-  }
-  .row:last-child{ border-bottom:none; }
-  .player-name{
-    flex:1;
-    font-size:16px;
-    font-weight:500;
-  }
-  .player-score{
-    font-size:17px;
-    font-weight:600;
-    font-variant-numeric:tabular-nums;
-    min-width:40px;
-    text-align:right;
-  }
-  .dealer-btn{
-    border:none;
-    background:var(--separator);
-    color:var(--gray);
-    font-size:12px;
-    font-weight:600;
-    padding:6px 10px;
-    border-radius:20px;
-    display:flex;
-    align-items:center;
-    gap:4px;
-    white-space:nowrap;
-  }
-  .dealer-btn.active{
-    background:var(--blue);
-    color:#fff;
-  }
-  .remove-btn{
-    border:none;
-    background:none;
-    color:var(--red);
-    font-size:20px;
-    line-height:1;
-    padding:0 2px;
-  }
-  .add-row{
-    display:flex;
-    gap:8px;
-    padding:14px;
-  }
-  .add-row input{
-    flex:1;
-    border:none;
-    background:var(--bg);
-    color:var(--text);
-    border-radius:10px;
-    padding:10px 12px;
-    font-size:16px;
-    outline:none;
-  }
-  .btn{
-    border:none;
-    border-radius:10px;
-    padding:10px 16px;
-    font-size:16px;
-    font-weight:600;
-    background:var(--blue);
-    color:#fff;
-  }
-  .btn:disabled{ background:var(--gray-light); }
-  .btn.secondary{
-    background:var(--separator);
-    color:var(--blue);
-  }
-  .rounds-list .row{
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    gap:6px;
-  }
-  .round-header{
-    display:flex;
-    justify-content:space-between;
-    font-size:13px;
-    color:var(--gray);
-    font-weight:600;
-  }
-  .round-scores{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px 16px;
-    font-size:15px;
-  }
-  .round-scores span b{ font-variant-numeric:tabular-nums; }
-  .rank-num{
-    width:22px;
-    text-align:center;
-    font-size:15px;
-    color:var(--gray);
-    font-weight:600;
-  }
-  .row.leader .rank-num{ color:var(--blue); }
-  .empty{
-    text-align:center;
-    color:var(--gray);
-    font-size:14px;
-    padding:30px 10px;
-  }
-  .tabbar{
-    position:fixed;
-    left:0; right:0; bottom:0;
-    background:rgba(255,255,255,0.9);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border-top:0.5px solid var(--separator);
-    padding:10px 16px calc(env(safe-area-inset-bottom) + 10px);
-    display:flex;
-    gap:10px;
-    max-width:520px;
-    margin:0 auto;
-  }
-  .tabbar .btn{ flex:1; }
-
-  /* Sheet modal */
-  .overlay{
-    position:fixed; inset:0;
-    background:rgba(0,0,0,0.35);
-    display:none;
-    align-items:flex-end;
-    z-index:50;
-  }
-  .overlay.show{ display:flex; }
-  .sheet{
-    background:var(--card);
-    width:100%;
-    max-width:520px;
-    margin:0 auto;
-    border-radius:16px 16px 0 0;
-    padding:14px 16px calc(env(safe-area-inset-bottom) + 16px);
-    max-height:80vh;
-    overflow-y:auto;
-    animation:slideUp 0.25s ease-out;
-  }
-  @keyframes slideUp{
-    from{ transform:translateY(100%); }
-    to{ transform:translateY(0); }
-  }
-  .sheet-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:6px 0 14px;
-  }
-  .sheet-header h2{
-    font-size:17px;
-    margin:0;
-  }
-  .sheet-header button{
-    border:none;
-    background:none;
-    font-size:16px;
-    color:var(--blue);
-  }
-  .score-input-row{
-    display:flex;
-    align-items:center;
-    padding:10px 4px;
-    border-bottom:0.5px solid var(--separator);
-    gap:10px;
-  }
-  .score-input-row:last-of-type{ border-bottom:none; }
-  .score-input-row label{ flex:1; font-size:16px; }
-  .score-input-row.excluded label{ color:var(--gray); }
-  .score-input-row input[type="checkbox"]{
-    width:20px;
-    height:20px;
-    accent-color:var(--blue);
-  }
-  .stepper{
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .stepper button{
-    width:30px;
-    height:30px;
-    border:none;
-    border-radius:8px;
-    background:var(--bg);
-    color:var(--blue);
-    font-size:18px;
-    font-weight:600;
-    line-height:1;
-  }
-  .stepper.disabled{ opacity:0.35; pointer-events:none; }
-  .stepper button:active{ background:var(--separator); }
-  .stepper input{
-    width:60px;
-    text-align:center;
-    border:none;
-    background:var(--bg);
-    color:var(--text);
-    border-radius:10px;
-    padding:8px 4px;
-    font-size:16px;
-    outline:none;
-  }
+:root{
+  --bg:#f2f2f7; --card:#ffffff; --text:#1c1c1e; --sub:#8e8e93;
+  --accent:#c0392b; --accent2:#c9a227; --sep:#e5e5ea; --danger:#ff3b30;
+  --dealer:#c9a227; --shadow:rgba(0,0,0,0.06);
+  --radius:16px;
+}
+[data-theme="dark"]{
+  --bg:#0b0b0d; --card:#17181b; --text:#f2f2f2; --sub:#8e8e93;
+  --accent:#e0483e; --accent2:#d4af37; --sep:#2c2c2e; --danger:#ff453a;
+  --dealer:#d4af37; --shadow:rgba(0,0,0,0.5);
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+body{
+  margin:0; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Segoe UI,Roboto,sans-serif;
+  background:var(--bg); color:var(--text); padding-bottom:60px; transition:background .3s,color .3s;
+}
+header{
+  position:sticky; top:0; z-index:10; background:var(--bg); padding:14px 16px 8px;
+  display:flex; align-items:center; justify-content:space-between; backdrop-filter:blur(10px);
+}
+h1{font-size:22px; margin:0; font-weight:700; letter-spacing:-0.3px;}
+.theme-btn{
+  border:none; background:var(--card); color:var(--text); width:38px; height:38px; border-radius:50%;
+  font-size:18px; display:flex; align-items:center; justify-content:center; box-shadow:0 1px 3px var(--shadow);
+}
+.container{padding:0 16px; max-width:640px; margin:0 auto;}
+.card{
+  background:var(--card); border-radius:var(--radius); padding:14px 16px; margin-bottom:14px;
+  box-shadow:0 1px 3px var(--shadow);
+}
+.card h2{font-size:13px; text-transform:uppercase; letter-spacing:0.5px; color:var(--sub); margin:0 0 10px;}
+.row{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:8px 0;}
+.row + .row{border-top:1px solid var(--sep);}
+input[type="text"], input[type="number"], input[type="date"]{
+  font-size:16px; border:1px solid var(--sep); background:transparent; color:var(--text);
+  border-radius:10px; padding:9px 12px; width:100%; font-family:inherit;
+}
+.btn{
+  border:none; border-radius:10px; padding:10px 16px; font-size:15px; font-weight:600; cursor:pointer;
+  background:var(--accent); color:#fff; transition:opacity .15s;
+}
+.btn:active{opacity:.7;}
+.btn.secondary{background:var(--sep); color:var(--text);}
+.btn.danger{background:var(--danger); color:#fff;}
+.btn.small{padding:6px 10px; font-size:13px; border-radius:8px;}
+.btn.pill{border-radius:20px;}
+.btn:disabled{opacity:.35; cursor:default;}
+.icon-btn{
+  border:none; background:transparent; color:var(--sub); font-size:18px; padding:4px 8px; cursor:pointer;
+}
+.icon-btn.danger{color:var(--danger);}
+.chip{
+  display:inline-flex; align-items:center; gap:6px; background:var(--bg); border:1px solid var(--sep);
+  border-radius:20px; padding:6px 12px; font-size:14px; cursor:pointer; user-select:none;
+}
+.chip.selected{background:var(--accent); border-color:var(--accent); color:#fff;}
+.chip.dealer-tag{background:var(--dealer); border-color:var(--dealer); color:#1c1c1e; font-weight:700;}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.player-name{font-size:16px; font-weight:500;}
+.empty{color:var(--sub); font-size:14px; text-align:center; padding:20px 0;}
+.score-input-row{display:flex; align-items:center; gap:10px;}
+.score-input-row .player-name{flex:1;}
+.score-input-row input{width:90px; text-align:right;}
+.dealer-toggle{
+  border:1px solid var(--sep); background:transparent; color:var(--sub); border-radius:8px;
+  width:34px; height:34px; font-size:16px; cursor:pointer;
+}
+.dealer-toggle.active{background:var(--dealer); border-color:var(--dealer); color:#1c1c1e;}
+table{width:100%; border-collapse:collapse; font-size:14px;}
+th,td{padding:6px 4px; text-align:center; border-bottom:1px solid var(--sep);}
+th:first-child, td:first-child{text-align:left;}
+.rank-row{display:flex; align-items:center; justify-content:space-between; padding:10px 6px; border-radius:10px;}
+.rank-row.winner{background:linear-gradient(90deg, var(--dealer), transparent 90%); }
+.rank-left{display:flex; align-items:center; gap:10px;}
+.rank-pos{width:22px; height:22px; border-radius:50%; background:var(--sep); display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;}
+.rank-row.winner .rank-pos{background:var(--dealer); color:#1c1c1e;}
+.rank-score{font-weight:700; font-size:16px;}
+.tabs{display:flex; gap:8px; margin-bottom:14px;}
+.tab{flex:1; text-align:center; padding:10px; border-radius:10px; background:var(--card); color:var(--sub); font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 1px 3px var(--shadow);}
+.tab.active{background:var(--accent); color:#fff;}
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,0.5); display:flex; align-items:flex-end;
+  justify-content:center; z-index:100;
+}
+.modal{
+  background:var(--card); width:100%; max-width:640px; border-radius:20px 20px 0 0; padding:20px;
+  animation:slideup .25s ease-out;
+}
+@keyframes slideup{from{transform:translateY(20px); opacity:0;} to{transform:translateY(0); opacity:1;}}
+.modal h3{margin:0 0 14px; font-size:18px;}
+.modal-actions{display:flex; gap:10px; margin-top:16px;}
+.modal-actions .btn{flex:1;}
+.stat-row{display:flex; justify-content:space-between; padding:8px 0; font-size:14px;}
+.stat-row + .stat-row{border-top:1px solid var(--sep);}
+.section-title{font-size:20px; font-weight:700; margin:6px 0 12px;}
+.history-item{padding:10px 0;}
+.history-item + .history-item{border-top:1px solid var(--sep);}
+.history-head{display:flex; justify-content:space-between; align-items:center;}
+.history-head .date{font-weight:600;}
+.history-head .sub{color:var(--sub); font-size:13px;}
+select{font-size:16px; border:1px solid var(--sep); background:var(--card); color:var(--text); border-radius:10px; padding:9px 12px; width:100%;}
+.date-row{display:flex; align-items:center; gap:10px;}
+.date-row input{max-width:200px;}
 </style>
 </head>
 <body>
 
-<div class="navbar">
-  <button id="themeToggle" style="position:absolute; right:16px; top:calc(env(safe-area-inset-top) + 12px); border:none; background:none; font-size:20px;">🌙</button>
-  <h1>Rami</h1>
-  <div class="sub" id="roundCount">Aucune manche jouée</div>
-</div>
+<header>
+  <h1>🃏 Rami</h1>
+  <button class="theme-btn" id="themeBtn">🌙</button>
+</header>
 
 <div class="container">
+  <div class="tabs">
+    <div class="tab active" data-tab="game">Partie</div>
+    <div class="tab" data-tab="history">Historique</div>
+    <div class="tab" data-tab="stats">Stats</div>
+  </div>
 
-  <div class="section-title">Joueurs</div>
-  <div class="card">
-    <div id="playersList"></div>
-    <div class="add-row">
-      <input type="text" id="newPlayerName" placeholder="Nom du joueur" maxlength="20">
-      <button class="btn" id="addPlayerBtn">Ajouter</button>
+  <!-- GAME TAB -->
+  <div id="tab-game">
+    <div class="card">
+      <h2>Joueurs</h2>
+      <div id="playersList"></div>
+      <div class="row" style="border-top:none; margin-top:6px;">
+        <input type="text" id="newPlayerName" placeholder="Nom du joueur">
+        <button class="btn" id="addPlayerBtn">Ajouter</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Partie en cours</h2>
+      <div class="date-row">
+        <input type="date" id="gameDate">
+        <button class="btn secondary" id="newGameBtn">Nouvelle partie</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Classement</h2>
+      <div id="ranking"></div>
+    </div>
+
+    <div class="card">
+      <h2>Manches</h2>
+      <button class="btn pill" id="newRoundBtn" style="margin-bottom:12px;">+ Nouvelle manche</button>
+      <div id="roundsList"></div>
     </div>
   </div>
 
-  <div class="section-title">Classement</div>
-  <div class="card" id="rankingCard"></div>
-
-  <div class="section-title">Manches</div>
-  <div class="card rounds-list" id="roundsList">
-    <div class="empty">Aucune manche pour l'instant</div>
-  </div>
-
-</div>
-
-<div class="tabbar">
-  <button class="btn secondary" id="resetBtn">Réinitialiser</button>
-  <button class="btn" id="newRoundBtn">Nouvelle manche</button>
-</div>
-
-<div class="overlay" id="overlay">
-  <div class="sheet">
-    <div class="sheet-header">
-      <button id="cancelRoundBtn">Annuler</button>
-      <h2>Manche <span id="roundNumberLabel"></span></h2>
-      <button id="validateRoundBtn"><b>OK</b></button>
+  <!-- HISTORY TAB -->
+  <div id="tab-history" style="display:none;">
+    <div class="card">
+      <h2>Parties précédentes</h2>
+      <div id="historyList"></div>
+      <button class="btn secondary" id="exportBtn" style="margin-top:10px;">Exporter (JSON)</button>
     </div>
-    <button id="deleteRoundBtn" style="display:none; width:100%; border:none; background:none; color:var(--red); font-size:16px; padding:8px 0 4px;">Supprimer cette manche</button>
-    <div id="scoreInputs"></div>
+  </div>
+
+  <!-- STATS TAB -->
+  <div id="tab-stats" style="display:none;">
+    <div class="card">
+      <h2>Statistiques par joueur</h2>
+      <div id="statsList"></div>
+    </div>
   </div>
 </div>
+
+<div id="modalRoot"></div>
 
 <script>
-  const STORAGE_KEY = 'rami-state';
-  let players = []; // {id, name, isDealer}
-  let rounds = []; // [{scores: {playerId: score}}]
-  let nextId = 1;
+const STORAGE_KEY = 'rami_state_v1';
 
-  const playersList = document.getElementById('playersList');
-  const roundsList = document.getElementById('roundsList');
-  const roundCount = document.getElementById('roundCount');
-  const overlay = document.getElementById('overlay');
-  const scoreInputs = document.getElementById('scoreInputs');
-  const roundNumberLabel = document.getElementById('roundNumberLabel');
-  const rankingCard = document.getElementById('rankingCard');
-  let editingIndex = null; // index de la manche en cours d'édition, null = nouvelle manche
-
-  function saveState(){
-    try{
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ players, rounds, nextId }));
-    }catch(e){}
+function loadState(){
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if(raw){
+    try{ return JSON.parse(raw); }catch(e){}
   }
+  return {
+    theme:'light',
+    players:[],
+    currentGame:{ id:genId(), date:todayStr(), rounds:[] },
+    history:[]
+  };
+}
+function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+function genId(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+function todayStr(){ return new Date().toISOString().slice(0,10); }
 
-  function loadState(){
-    try{
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if(!raw) return;
-      const data = JSON.parse(raw);
-      players = data.players || [];
-      rounds = data.rounds || [];
-      nextId = data.nextId || 1;
-    }catch(e){}
+let state = loadState();
+
+// THEME
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', state.theme);
+  document.getElementById('themeBtn').textContent = state.theme==='dark' ? '☀️' : '🌙';
+}
+document.getElementById('themeBtn').addEventListener('click', ()=>{
+  state.theme = state.theme==='dark' ? 'light' : 'dark';
+  saveState(); applyTheme();
+});
+
+// TABS
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    ['game','history','stats'].forEach(name=>{
+      document.getElementById('tab-'+name).style.display = (name===t.dataset.tab)?'block':'none';
+    });
+    if(t.dataset.tab==='history') renderHistory();
+    if(t.dataset.tab==='stats') renderStats();
+  });
+});
+
+// PLAYERS (independent of rounds/games)
+function renderPlayers(){
+  const el = document.getElementById('playersList');
+  if(state.players.length===0){
+    el.innerHTML = '<div class="empty">Aucun joueur pour le moment</div>';
+    return;
   }
+  el.innerHTML = state.players.map(p=>`
+    <div class="row">
+      <span class="player-name">${escapeHtml(p.name)}</span>
+      <button class="icon-btn danger" onclick="removePlayer('${p.id}')">✕</button>
+    </div>
+  `).join('');
+}
+function addPlayer(){
+  const input = document.getElementById('newPlayerName');
+  const name = input.value.trim();
+  if(!name) return;
+  state.players.push({id:genId(), name});
+  input.value='';
+  saveState(); renderPlayers(); renderRanking(); renderRounds();
+}
+function removePlayer(id){
+  showConfirm('Supprimer ce joueur ? Ses scores dans les manches enregistrées seront conservés.', ()=>{
+    state.players = state.players.filter(p=>p.id!==id);
+    saveState(); renderPlayers(); renderRanking(); renderRounds();
+  });
+}
+document.getElementById('addPlayerBtn').addEventListener('click', addPlayer);
+document.getElementById('newPlayerName').addEventListener('keydown', e=>{ if(e.key==='Enter') addPlayer(); });
 
-  function totalFor(playerId){
-    return rounds.reduce((sum, r) => sum + (r.scores[playerId] || 0), 0);
-  }
-
-  function render(){
-    // players
-    if(players.length === 0){
-      playersList.innerHTML = '';
-    } else {
-      playersList.innerHTML = players.map(p => `
-        <div class="row">
-          <button class="dealer-btn ${p.isDealer ? 'active' : ''}" data-dealer="${p.id}">🃏 Donneur</button>
-          <div class="player-name">${p.name}</div>
-          <div class="player-score">${totalFor(p.id)}</div>
-          <button class="remove-btn" data-remove="${p.id}">✕</button>
-        </div>
-      `).join('');
+// GAME DATE / NEW GAME
+document.getElementById('gameDate').addEventListener('change', e=>{
+  state.currentGame.date = e.target.value;
+  saveState();
+});
+document.getElementById('newGameBtn').addEventListener('click', ()=>{
+  showConfirm("Démarrer une nouvelle partie ? La partie en cours sera archivée dans l'historique.", ()=>{
+    if(state.currentGame.rounds.length>0){
+      state.history.unshift(state.currentGame);
     }
-
-    // classement (score le plus bas = gagnant)
-    if(players.length === 0){
-      rankingCard.innerHTML = '<div class="empty">Ajoute des joueurs</div>';
-    } else {
-      const ranked = [...players].sort((a,b) => totalFor(b.id) - totalFor(a.id));
-      const maxScore = totalFor(ranked[0].id);
-      rankingCard.innerHTML = ranked.map((p, i) => `
-        <div class="row ${totalFor(p.id) === maxScore ? 'leader' : ''}">
-          <div class="rank-num">${i+1}${totalFor(p.id) === maxScore && rounds.length > 0 ? ' 👑' : ''}</div>
-          <div class="player-name">${p.name}</div>
-          <div class="player-score">${totalFor(p.id)}</div>
-        </div>
-      `).join('');
-    }
-
-    // rounds
-    if(rounds.length === 0){
-      roundsList.innerHTML = '<div class="empty">Aucune manche pour l\'instant</div>';
-    } else {
-      roundsList.innerHTML = rounds.map((r, i) => `
-        <div class="row" data-edit-round="${i}">
-          <div class="round-header"><span>Manche ${i+1}</span><span>${r.dealerName ? '🃏 ' + r.dealerName : ''}</span></div>
-          <div class="round-scores">
-            ${players.map(p => `<span>${p.name}: <b>${(p.id in r.scores) ? r.scores[p.id] : '—'}</b></span>`).join('')}
-          </div>
-        </div>
-      `).join('');
-    }
-
-    roundCount.textContent = rounds.length === 0
-      ? 'Aucune manche jouée'
-      : rounds.length + ' manche' + (rounds.length > 1 ? 's' : '') + ' jouée' + (rounds.length > 1 ? 's' : '');
-
+    state.currentGame = { id:genId(), date:todayStr(), rounds:[] };
     saveState();
+    renderAll();
+  });
+});
+
+// ROUNDS
+function playerName(id){
+  const p = state.players.find(p=>p.id===id);
+  return p ? p.name : '(joueur supprimé)';
+}
+
+function renderRounds(){
+  const el = document.getElementById('roundsList');
+  const rounds = state.currentGame.rounds;
+  if(rounds.length===0){
+    el.innerHTML = '<div class="empty">Aucune manche enregistrée</div>';
+    return;
+  }
+  el.innerHTML = rounds.map((r,idx)=>`
+    <div class="card" style="background:var(--bg); box-shadow:none; border:1px solid var(--sep);">
+      <div class="row" style="border-top:none;">
+        <strong>Manche ${idx+1}</strong>
+        <div>
+          <button class="icon-btn" onclick="editRound('${r.id}')">✏️</button>
+          <button class="icon-btn danger" onclick="deleteRound('${r.id}')">🗑️</button>
+        </div>
+      </div>
+      <table>
+        <tr><th>Joueur</th><th>Score</th><th>Donneur</th></tr>
+        ${r.participants.map(pid=>`
+          <tr>
+            <td>${escapeHtml(playerName(pid))}</td>
+            <td>${r.scores[pid] ?? 0}</td>
+            <td>${r.dealerId===pid ? '🎴' : ''}</td>
+          </tr>
+        `).join('')}
+      </table>
+    </div>
+  `).join('');
+}
+
+function renderRanking(){
+  const el = document.getElementById('ranking');
+  const totals = {};
+  state.players.forEach(p=> totals[p.id]=0 );
+  state.currentGame.rounds.forEach(r=>{
+    r.participants.forEach(pid=>{
+      if(!(pid in totals)) totals[pid]=0;
+      totals[pid] += Number(r.scores[pid]||0);
+    });
+  });
+  const ranked = Object.keys(totals)
+    .map(pid=>({pid, total:totals[pid]}))
+    .sort((a,b)=>b.total-a.total);
+  if(ranked.length===0){
+    el.innerHTML = '<div class="empty">Ajoutez des joueurs et des manches</div>';
+    return;
+  }
+  el.innerHTML = ranked.map((r,idx)=>`
+    <div class="rank-row ${idx===0 && r.total>0 ? 'winner':''}">
+      <div class="rank-left">
+        <div class="rank-pos">${idx+1}</div>
+        <div class="player-name">${escapeHtml(playerName(r.pid))}${idx===0 && r.total>0 ? ' 👑':''}</div>
+      </div>
+      <div class="rank-score">${r.total}</div>
+    </div>
+  `).join('');
+}
+
+function newRoundModal(){
+  if(state.players.length===0){
+    showAlert('Ajoutez au moins un joueur avant de créer une manche.');
+    return;
+  }
+  let selected = new Set(state.players.map(p=>p.id));
+  let dealerId = null;
+
+  const body = `
+    <h3>Nouvelle manche</h3>
+    <div class="chips" id="playerChips"></div>
+    <p style="color:var(--sub); font-size:13px; margin-top:14px;">Touchez un joueur pour désigner le donneur.</p>
+    <div class="modal-actions">
+      <button class="btn secondary" id="cancelRound">Annuler</button>
+      <button class="btn" id="confirmRound">Créer la manche</button>
+    </div>
+  `;
+  openModal(body, ()=>{
+    function renderChips(){
+      document.getElementById('playerChips').innerHTML = state.players.map(p=>`
+        <div class="chip ${selected.has(p.id)?'selected':''} ${dealerId===p.id?'dealer-tag':''}" data-id="${p.id}">
+          ${escapeHtml(p.name)}${dealerId===p.id?' 🎴':''}
+        </div>
+      `).join('');
+      document.querySelectorAll('#playerChips .chip').forEach(chip=>{
+        let pressTimer;
+        chip.addEventListener('click', ()=>{
+          const id = chip.dataset.id;
+          if(selected.has(id)) selected.delete(id); else { selected.add(id); }
+          if(!selected.has(id) && dealerId===id) dealerId=null;
+          renderChips();
+        });
+        chip.addEventListener('dblclick', ()=>{
+          const id = chip.dataset.id;
+          if(!selected.has(id)) return;
+          dealerId = (dealerId===id) ? null : id;
+          renderChips();
+        });
+      });
+    }
+    renderChips();
+    document.getElementById('cancelRound').addEventListener('click', closeModal);
+    document.getElementById('confirmRound').addEventListener('click', ()=>{
+      const participants = Array.from(selected);
+      if(participants.length===0){ showAlert('Sélectionnez au moins un joueur.'); return; }
+      const scores = {};
+      participants.forEach(pid=> scores[pid]=0 );
+      state.currentGame.rounds.push({ id:genId(), participants, dealerId, scores });
+      saveState();
+      closeModal();
+      renderRounds(); renderRanking();
+      editRound(state.currentGame.rounds[state.currentGame.rounds.length-1].id);
+    });
+  });
+}
+document.getElementById('newRoundBtn').addEventListener('click', newRoundModal);
+
+function editRound(roundId){
+  const round = state.currentGame.rounds.find(r=>r.id===roundId);
+  if(!round) return;
+  const body = `
+    <h3>Modifier la manche</h3>
+    <div id="scoreRows"></div>
+    <div class="modal-actions">
+      <button class="btn secondary" id="cancelEdit">Annuler</button>
+      <button class="btn" id="saveEdit">Enregistrer</button>
+    </div>
+  `;
+  openModal(body, ()=>{
+    const el = document.getElementById('scoreRows');
+    el.innerHTML = round.participants.map(pid=>`
+      <div class="score-input-row" style="margin-bottom:10px;">
+        <button class="dealer-toggle ${round.dealerId===pid?'active':''}" data-dealer="${pid}">🎴</button>
+        <span class="player-name">${escapeHtml(playerName(pid))}</span>
+        <input type="number" inputmode="numeric" data-score="${pid}" value="${round.scores[pid] ?? 0}">
+      </div>
+    `).join('');
+    el.querySelectorAll('[data-dealer]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const pid = btn.dataset.dealer;
+        round.dealerId = (round.dealerId===pid) ? null : pid;
+        el.querySelectorAll('[data-dealer]').forEach(b=>b.classList.toggle('active', b.dataset.dealer===round.dealerId));
+      });
+    });
+    document.getElementById('cancelEdit').addEventListener('click', closeModal);
+    document.getElementById('saveEdit').addEventListener('click', ()=>{
+      el.querySelectorAll('[data-score]').forEach(input=>{
+        round.scores[input.dataset.score] = Number(input.value)||0;
+      });
+      saveState();
+      closeModal();
+      renderRounds(); renderRanking();
+    });
+  });
+}
+
+function deleteRound(roundId){
+  showConfirm('Supprimer cette manche ? Cette action est irréversible.', ()=>{
+    state.currentGame.rounds = state.currentGame.rounds.filter(r=>r.id!==roundId);
+    saveState();
+    renderRounds(); renderRanking();
+  });
+}
+
+// HISTORY
+function renderHistory(){
+  const el = document.getElementById('historyList');
+  if(state.history.length===0){
+    el.innerHTML = '<div class="empty">Aucune partie archivée</div>';
+    return;
+  }
+  el.innerHTML = state.history.map(g=>{
+    const totals = {};
+    g.rounds.forEach(r=> r.participants.forEach(pid=>{
+      totals[pid]=(totals[pid]||0)+Number(r.scores[pid]||0);
+    }));
+    const ranked = Object.keys(totals).map(pid=>({pid,total:totals[pid]})).sort((a,b)=>b.total-a.total);
+    const winner = ranked[0];
+    return `
+      <div class="history-item">
+        <div class="history-head">
+          <span class="date">${g.date}</span>
+          <span class="sub">${g.rounds.length} manche(s)</span>
+        </div>
+        <div class="sub">${winner ? '🏆 '+escapeHtml(playerName(winner.pid))+' — '+winner.total+' pts' : ''}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+document.getElementById('exportBtn').addEventListener('click', ()=>{
+  const data = JSON.stringify({players:state.players, currentGame:state.currentGame, history:state.history}, null, 2);
+  const blob = new Blob([data], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'rami_export_'+todayStr()+'.json';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// STATS
+function renderStats(){
+  const el = document.getElementById('statsList');
+  const allGames = [...state.history];
+  if(state.currentGame.rounds.length>0) allGames.push(state.currentGame);
+
+  if(allGames.length===0 || state.players.length===0){
+    el.innerHTML = '<div class="empty">Pas encore de données</div>';
+    return;
   }
 
-  document.getElementById('addPlayerBtn').addEventListener('click', () => {
-    const input = document.getElementById('newPlayerName');
-    const name = input.value.trim();
-    if(!name) return;
-    players.push({ id: nextId++, name, isDealer: players.length === 0 });
-    input.value = '';
-    render();
+  const stats = {};
+  state.players.forEach(p=> stats[p.id]={wins:0, gamesPlayed:0, totalScore:0} );
+
+  allGames.forEach(g=>{
+    const totals = {};
+    g.rounds.forEach(r=> r.participants.forEach(pid=>{
+      totals[pid]=(totals[pid]||0)+Number(r.scores[pid]||0);
+    }));
+    const ranked = Object.keys(totals).map(pid=>({pid,total:totals[pid]})).sort((a,b)=>b.total-a.total);
+    if(ranked.length===0) return;
+    const topScore = ranked[0].total;
+    Object.keys(totals).forEach(pid=>{
+      if(!(pid in stats)) stats[pid]={wins:0, gamesPlayed:0, totalScore:0};
+      stats[pid].gamesPlayed += 1;
+      stats[pid].totalScore += totals[pid];
+      if(totals[pid]===topScore) stats[pid].wins += 1;
+    });
   });
 
-  document.getElementById('newPlayerName').addEventListener('keydown', (e) => {
-    if(e.key === 'Enter') document.getElementById('addPlayerBtn').click();
-  });
-
-  playersList.addEventListener('click', (e) => {
-    const dealerId = e.target.closest('[data-dealer]')?.dataset.dealer;
-    const removeId = e.target.closest('[data-remove]')?.dataset.remove;
-    if(dealerId){
-      const id = parseInt(dealerId);
-      players.forEach(p => p.isDealer = (p.id === id));
-      render();
-    }
-    if(removeId){
-      const id = parseInt(removeId);
-      players = players.filter(p => p.id !== id);
-      render();
-    }
-  });
-
-  function openRoundSheet(index){
-    editingIndex = index;
-    const existing = index !== null ? rounds[index] : null;
-    roundNumberLabel.textContent = (index !== null ? index + 1 : rounds.length + 1);
-    document.getElementById('deleteRoundBtn').style.display = index !== null ? 'block' : 'none';
-    scoreInputs.innerHTML = players.map(p => {
-      const included = existing ? (p.id in existing.scores) : true;
-      return `
-      <div class="score-input-row ${included ? '' : 'excluded'}">
-        <input type="checkbox" data-participant="${p.id}" ${included ? 'checked' : ''}>
-        <label>${p.name}</label>
-        <div class="stepper ${included ? '' : 'disabled'}" data-stepper="${p.id}">
-          <button type="button" data-step="-1" data-target="${p.id}">−</button>
-          <input type="number" inputmode="numeric" data-score="${p.id}" value="${existing ? (existing.scores[p.id] ?? 0) : 0}">
-          <button type="button" data-step="1" data-target="${p.id}">+</button>
+  el.innerHTML = Object.keys(stats).map(pid=>{
+    const s = stats[pid];
+    const avg = s.gamesPlayed>0 ? (s.totalScore/s.gamesPlayed).toFixed(1) : '0';
+    return `
+      <div class="stat-row" style="flex-direction:column; align-items:flex-start; gap:4px;">
+        <strong>${escapeHtml(playerName(pid))}</strong>
+        <div class="sub" style="display:flex; gap:16px; color:var(--sub); font-size:13px;">
+          <span>🏆 ${s.wins} victoire(s)</span>
+          <span>🎯 ${avg} pts/partie moy.</span>
+          <span>${s.gamesPlayed} partie(s)</span>
         </div>
       </div>
     `;
-    }).join('');
-    overlay.classList.add('show');
-  }
+  }).join('');
+}
 
-  document.getElementById('newRoundBtn').addEventListener('click', () => {
-    if(players.length < 2){
-      alert('Ajoute au moins 2 joueurs pour commencer une manche.');
-      return;
-    }
-    openRoundSheet(null);
+// MODALS
+function openModal(innerHtml, onReady){
+  const root = document.getElementById('modalRoot');
+  root.innerHTML = `<div class="modal-overlay" id="overlay"><div class="modal">${innerHtml}</div></div>`;
+  document.getElementById('overlay').addEventListener('click', (e)=>{ if(e.target.id==='overlay') closeModal(); });
+  if(onReady) onReady();
+}
+function closeModal(){ document.getElementById('modalRoot').innerHTML=''; }
+function showConfirm(message, onConfirm){
+  openModal(`
+    <h3>Confirmation</h3>
+    <p>${escapeHtml(message)}</p>
+    <div class="modal-actions">
+      <button class="btn secondary" id="confNo">Annuler</button>
+      <button class="btn danger" id="confYes">Confirmer</button>
+    </div>
+  `, ()=>{
+    document.getElementById('confNo').addEventListener('click', closeModal);
+    document.getElementById('confYes').addEventListener('click', ()=>{ closeModal(); onConfirm(); });
   });
-
-  roundsList.addEventListener('click', (e) => {
-    const idx = e.target.closest('[data-edit-round]')?.dataset.editRound;
-    if(idx !== undefined) openRoundSheet(parseInt(idx));
+}
+function showAlert(message){
+  openModal(`
+    <h3>Info</h3>
+    <p>${escapeHtml(message)}</p>
+    <div class="modal-actions">
+      <button class="btn" id="alertOk">OK</button>
+    </div>
+  `, ()=>{
+    document.getElementById('alertOk').addEventListener('click', closeModal);
   });
+}
 
-  scoreInputs.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-step]');
-    if(!btn) return;
-    const step = parseInt(btn.dataset.step);
-    const input = scoreInputs.querySelector(`input[data-score="${btn.dataset.target}"]`);
-    input.value = (parseInt(input.value) || 0) + step;
-  });
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
 
-  scoreInputs.addEventListener('change', (e) => {
-    const check = e.target.closest('[data-participant]');
-    if(!check) return;
-    const row = check.closest('.score-input-row');
-    const stepper = row.querySelector('.stepper');
-    row.classList.toggle('excluded', !check.checked);
-    stepper.classList.toggle('disabled', !check.checked);
-  });
+function renderAll(){
+  document.getElementById('gameDate').value = state.currentGame.date;
+  renderPlayers();
+  renderRanking();
+  renderRounds();
+}
 
-  document.getElementById('cancelRoundBtn').addEventListener('click', () => {
-    editingIndex = null;
-    overlay.classList.remove('show');
-  });
-
-  document.getElementById('validateRoundBtn').addEventListener('click', () => {
-    const scores = {};
-    scoreInputs.querySelectorAll('[data-participant]').forEach(check => {
-      if(!check.checked) return;
-      const id = parseInt(check.dataset.participant);
-      const input = scoreInputs.querySelector(`input[data-score="${id}"]`);
-      scores[id] = parseInt(input.value) || 0;
-    });
-    if(editingIndex !== null){
-      rounds[editingIndex].scores = scores;
-    } else {
-      const dealer = players.find(p => p.isDealer);
-      rounds.push({ scores, dealerName: dealer ? dealer.name : null });
-    }
-    editingIndex = null;
-    overlay.classList.remove('show');
-    render();
-  });
-
-  document.getElementById('deleteRoundBtn').addEventListener('click', () => {
-    if(editingIndex === null) return;
-    if(confirm('Supprimer cette manche ?')){
-      rounds.splice(editingIndex, 1);
-      editingIndex = null;
-      overlay.classList.remove('show');
-      render();
-    }
-  });
-
-  document.getElementById('resetBtn').addEventListener('click', () => {
-    if(confirm('Réinitialiser la partie ? Les manches seront effacées (les joueurs restent).')){
-      rounds = [];
-      players.forEach(p => p.isDealer = false);
-      if(players.length) players[0].isDealer = true;
-      render();
-    }
-  });
-
-  loadState();
-  render();
-  document.getElementById('themeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    document.getElementById('themeToggle').textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-  });
-
+applyTheme();
+renderAll();
 </script>
 </body>
 </html>
