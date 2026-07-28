@@ -527,9 +527,10 @@
   });
 
   document.getElementById('resetBtn').addEventListener('click', () => {
-    if(confirm('Réinitialiser la partie ? Les joueurs et manches seront effacés.')){
-      players = [];
+    if(confirm('Réinitialiser la partie ? Les manches seront effacées (les joueurs restent).')){
       rounds = [];
+      players.forEach(p => p.isDealer = false);
+      if(players.length) players[0].isDealer = true;
       render();
     }
   });
